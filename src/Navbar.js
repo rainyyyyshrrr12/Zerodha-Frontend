@@ -1,8 +1,8 @@
 import React from 'react';
-function Education() {
+function Navbar() {
     return ( <h1>
-Education
+Navbar Component
     </h1> );
 }
 
-export default Education;
+export default Navbar;
