@@ -1,7 +1,7 @@
 import React from 'react';
 function Aboutpg() {
     return (  <h1>
-Brokerage Section
+Brokerage Sections
     </h1>);
 }
 
