@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
-import HomePage from "./landing/home/Homepg";
+import HomePage from "./landing/home/HomePage";
 import Signup from "./landing/signup/Signup";
-import AboutPage from "./landing/about/Aboutpg";
+import AboutPage from "./landing/about/AboutPage";
 import ProductPage from "./landing/products/ProductsPage";
-import PricingPage from "./landing/pricing/Pricingpg";
-import SupportPage from "./landing/support/Supportpg";
+import PricingPage from "./landing/pricing/PricingPage";
+import SupportPage from "./landing/support/SupportPage";
 
 import NotFound from "./landing/NotFound";
 import Navbar from "./landing/Navbar";
