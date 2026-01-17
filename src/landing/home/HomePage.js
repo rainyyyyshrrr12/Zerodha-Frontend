@@ -5,7 +5,7 @@ import Stats from "./Stats";
 import Pricing from "./Pricing";
 import Education from "./Education";
 
-import OpenAccount from "../OpenAccount";
+
 
 
 function HomePage() {
@@ -17,7 +17,7 @@ function HomePage() {
       <Stats />
       <Pricing />
       <Education />
-      <OpenAccount />
+     
      
     </>
   );
