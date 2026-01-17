@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Signup.css";
+import { API_BASE_URL } from "../../config";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3002/signup",
+        `${API_BASE_URL}/signup`,
         {
           name,
           email,
@@ -31,8 +32,9 @@ const Signup = () => {
       // save token
       localStorage.setItem("token", res.data.token);
 
-      // redirect to dashboard
-      window.location.href = "http://localhost:3001";
+      // redirect to DEPLOYED DASHBOARD
+      window.location.href =
+        "https://zerodha-dashboard-ob2t.onrender.com";
     } catch (err) {
       alert(err.response?.data?.msg || "Signup failed");
     }
@@ -42,7 +44,9 @@ const Signup = () => {
     <div className="signup-page">
       <div className="signup-card">
         <h2>Create your Zerodha account</h2>
-        <p className="subtitle">Start investing in stocks & mutual funds</p>
+        <p className="subtitle">
+          Start investing in stocks & mutual funds
+        </p>
 
         <form onSubmit={handleSignup} className="signup-form">
           <input
@@ -72,7 +76,6 @@ const Signup = () => {
           <button type="submit">Sign up</button>
         </form>
 
-        {/* 👇 Already registered link */}
         <p className="login-link">
           Already registered?{" "}
           <span onClick={() => navigate("/login")}>
